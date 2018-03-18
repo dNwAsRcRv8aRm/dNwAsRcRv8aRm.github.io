@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
  <head>
+  
+  <?php
+// список языков
+$sites = array(
+    "en" => "http://en.mysite.com/",
+    "es" => "http://es.mysite.com/",
+	"fr" => "http://fr.mysite.com/",
+);
+
+// получаем язык
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
+// проверяем язык
+if (!in_array($lang, array_keys($sites))){
+    $lang = 'en';
+}
+// перенаправление на субдомен
+header('Location: ' . $sites[$lang]);
+
+?>
+  
  <link rel="shortcut icon" href="/files/ico/favicon.ico" type="image/x-icon">
  <body background="/files/Pictures/foil.jpg">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
