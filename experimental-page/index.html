@@ -15,6 +15,50 @@
  <body>
  <div class="Time_text">
   <h1><font size="10" color="#FFFFF" face="Arial">Эксперементальня страница</font></h1>
+  111111111111111111111111111111111111111
+  <link type="text/css" rel="StyleSheet" href="http://wallaby.ucoz.ru/css_templates/famMiniProfStyleJqEd.css">  
+  <script type="text/javascript" src="http://wallaby.ucoz.ru/js_template/famMiniProfFunctionJqEd.js"></script>  
+  <div class="container">  
+  <ul class="tabs">  
+  <li><a href="#famInfo">Инфо</a></li>  
+  <li><a href="#famAdd">Добавить</a></li>  
+  </ul>  
+  <div class="tab_container">  
+  <div id="famInfo" class="tab_content">  
+  <?if($USER_LOGGED_IN$)?>  
+  <table style="width: 100%;" align="center"><tbody><tr><td colspan="2" class="minipTdPic">Привет, <span style="font-weight:700;">$USERNAME$</span></td></tr><tr><td rowspan="5" class="minipTdUnColored"><?if($USER_AVATAR_URL$)?>  
+  <img alt="Avatar" src="$USER_AVATAR_URL$"><?else?><img alt="noAvatar" src="http://wallaby.ucoz.ru/Images_template/no_avatar.png"><?endif?></td><td class="minipTdPic"><a href="$PERSONAL_PAGE_LINK$">  
+  <img alt="Мой профиль" src="http://wallaby.ucoz.ru/images33/miniProfAcc.png" title="Мой профиль" border="0"></a></td></tr><tr><td class="minipTdPic">  
+  <a href="javascript:openonclick('options')"><img alt="" src="http://wallaby.ucoz.ru/images33/miniProfEdit.png" title="Редактировать профиль" border="0"></a></td></tr><tr><td class="minipTdPic"><?if($UNREAD_PM$)?><a href="javascript:openonclick('mail')">  
+  <img alt="" src="http://wallaby.ucoz.ru/images33/miniProfYesPm.png" title="У вас есть новые сообщения" border="0"></a><?else?><a href="javascript:openonclick('mail')">  
+  <img alt="" src="http://wallaby.ucoz.ru/images33/miniProfNoPM.png" border="0" title="Нет новых сообщений"></a><?endif?></td></tr>  
+  <tr><td class="minipTdPic"><a href="$LOGOUT_LINK$"><img alt="" src="http://wallaby.ucoz.ru/images33/miniProfLogout.png" title="Выход" border="0"></a></td></tr></tbody></table><table style="width: 100%;" align="center"><tbody><tr><td class="minipTdPic">  
+  <a href="javascript:openonclick('users')"><img alt="" src="http://wallaby.ucoz.ru/images33/miniProfileUserList.png" title="Список пользователей" border="0"></a></td>  
+  <td class="minipTdPic"><a href="#" onclick="openchat();"><img alt="Мини-чат" src="http://wallaby.ucoz.ru/images33/miniProfileMiniChat.png" title="Мини-чат" border="0"></a></td><td class="minipTdPic">  
+  <a href="javascript: void(0)" onclick="window.open('http://wallaby.ucoz.ru/js_template/onlineRadio.html', 'onlineRadio', 'width=600, height=480');return false;">  
+  <img alt="Онлайн радио" src="http://wallaby.ucoz.ru/images33/miniProfRadio.png" title="Онлайн радио" border="0"></a></td><td class="minipTdPic"><a href="#" onclick="openpoll();">  
+  <img alt="Опрос" src="http://wallaby.ucoz.ru/images33/miniProfilePoll.png" title="Опрос" border="0"></a></td></tr></tbody></table>  
+  <div style="display: none;" id="chat">$CHAT_BOX$</div>  
+  <div style="display: none;" id="poll">$POLL$</div><?else?><table style="width: 100%; border-collapse:collapse;" align="center"><tbody><tr><td colspan="2" class="minipTdPic">  
+  Привет, <b>Гость</b><br><font color="#ff0000"><a href="$REGISTER_LINK$">Зарегистрируйтесь</a> или <a href="$LOGIN_LINK$">авторизуйтесь</a> и получите все приемущества сайта.</font><br>  
+  $LOG_FORM$</td></tr></tbody></table><?endif?>  
+  </div><div id="famAdd" class="tab_content">  
+  <table style="width: 100%; margin-top: 1px; margin-bottom: 1px;"><tbody><tr><td class="minipTdPic"><img src="http://wallaby.ucoz.ru/images33/miniProfNews.png" border="0"></td>  
+  <td class="minipTdUnColored"><a class="textDec" href="$HOME_PAGE_LINK$/news/0-0-0-0-1">Добавить новость</a></td></tr>  
+  <tr><td class="minipTdPic"><img src="http://wallaby.ucoz.ru/images33/miniProfFile.png" border="0"></td><td class="minipTdUnColored"><a class="textDec" href="$HOME_PAGE_LINK$/load/0-0-0-0-1">Добавить файл</a></td></tr>  
+  <tr><td class="minipTdPic"><img src="http://wallaby.ucoz.ru/images33/miniProfImage.png" border="0"></td><td class="minipTdUnColored">  
+  <a class="textDec" href="$HOME_PAGE_LINK$/photo/0-0-0-1">Добавить картинку</a></td></tr><tr><td class="minipTdPic">  
+  <img src="http://wallaby.ucoz.ru/images33/miniProfBlogEntry.png" border="0"></td><td class="minipTdUnColored"><a class="textDec" href="$HOME_PAGE_LINK$/blog/0-0-0-0-1">Добавить в блог</a></td></tr><tr><td class="minipTdPic">  
+  <img src="http://wallaby.ucoz.ru/images33/miniProfArticle.png" border="0"></td><td class="minipTdUnColored"><a class="textDec" href="$HOME_PAGE_LINK$/publ/0-0-0-0-1">Добавить статью</a></td></tr><tr><td class="minipTdPic">  
+  <img src="http://wallaby.ucoz.ru/images33/miniProfWebsite.png" border="0"></td><td class="minipTdUnColored"><a class="textDec" href="$HOME_PAGE_LINK$/dir/0-0-0-0-1">Добавить сайт</a></td></tr><tr><td colspan="1" class="minipTdPic">  
+  <img src="http://wallaby.ucoz.ru/images33/miniProfAdvert.png" border="0"></td><td colspan="1" class="minipTdUnColored"><a class="textDec" href="$HOME_PAGE_LINK$/board/0-0-0-0-1">Добавить объявление</a></td></tr></tbody></table>  
+  </div></div></div>  
+  <script type="text/javascript">  
+  function openonclick(client_type){if(client_type=="mail")clientWindow=window.open("$PM_URL$","pmw","scrollbars=1,top=0,left=0,resizable=1,width=850,h eight=350")  
+  ||alert("Отключите блокировку всплывающих окон!");if(client_type=="options")clientWindow=window.open("/index/11","options","scrollbars=1,top=0,left=0,resizable=1,width=680,height=350")||alert("Отключите блокировку всплывающих окон!")  
+  ;if(client_type=="users")clientWindow=window.open("$USERS_LIST_URL$","users","scrollbars=1,top=0,left=0,resizable=1,width=680,height=350")||a lert("Отключите блокировку всплывающих окон!")}  
+  </script>
+  111111111111111111111111111111111111111
   </div>
  </body>
 </html>
