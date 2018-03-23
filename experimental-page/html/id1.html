@@ -20,6 +20,207 @@
  </head>
  <body>
 11111111111111111111111111111111111111111
+  <script id="tplYouTubePopupHelper" type="text/x-jsrender">
+        <div class="modal-top">
+          <b>Совет!</b>
+        </div>
+        <div class="popup-content-install2">
+          <div class="popup-left-img" style="background-image: url('/img/after-video-download/popup-left-img.png')"></div>
+          <div class="modal-text-cont">
+            <h2><b>Хотите скачивать видео с <b>{{:service}}</b> еще быстрее и удобнее?</b></h2>
+            <p>Просто <a href="{{:link}}" target="_blank">установите {{:product}}</b></a> и оцените его возможности прямо сейчас</p>
+              <div class="btn-dwn-cont">
+                  <a href="{{:link}}" target="_blank"><button type="button" class="btn-dwn close-modal">Установить {{:productLite}}</button></a>
+                  <span><span class="browser-icon browser-icon-big" style="background-image:url('/img/browser/{{:browser_lower}}.png')"></span> для {{:browser}}</span>
+              </div>
+          </div>
+        </div>
+        </script>
+
+        <script id="tplUvdPopup" type="text/x-jsrender">
+          <div class="uvd-popup">
+            <div class="modal-title">Спасибо, что пользуетесь нашим сервисом!</div>
+            <div class="modal-info-block clearfix">
+                <div class="modal-img-cont">
+                    <img src="/img/after-video-download/uvd/modal-img.jpg">
+                </div>
+                <div class="modal-text-cont">
+                    <p><strong>New!</strong> Скачивайте HD и MP3 с YouTube в 1 клик с помощью!<br><span class="red-text modal-icons ummy-logo"><strong>Ummy Video Downloader</strong></span></p>
+
+                    <div class="btn-dwn-cont">
+                        <a href="{{:link}}" target="_blank"><button type="button" class="btn-dwn close-modal">Установить</button></a>
+                        {{if isFree}}<span class="modal-text-subtext">Это бесплатно!</span>{{/if}}
+                        <span class="for-info-text modal-icons {{:osDetails.cls}}">{{:osDetails.name}}</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </script>
+
+        <script id="tplOtherServicePopupHelper" type="text/x-jsrender">
+        <div class="modal-text-cont">
+          <h2>Хотите скачивать видео с <b>{{:service}}</b> еще быстрее и удобнее?</h2>
+          <p>Просто <a href="{{:link}}" target="_blank">установите {{:product}}</b></a> для <span class="browser-icon" style="background-image:url('/img/browser/{{:browser_lower}}.png')"></span>{{:browser}} и оцените его возможности прямо сейчас</p>
+          <div class="btn-dwn-cont">
+          <a href="{{:link}}" target="_blank"><button type="button" class="btn-dwn close-modal">Установить {{:productLite}}</button></a>
+            <div class="btn-dwn-arrow"></div>
+          </div>
+          </div>
+         </script>
+
+
+
+        <script id="tplResultMeta" type="text/x-jsrender">
+          {{for meta}}
+            {{if name}}
+              <div class="row {{:name}}" title="{{:title}}">{{:html}}</div>
+            {{else}}
+              <div class="row">{{:html}}</div>
+            {{/if}}
+          {{/for}}
+        </script>
+        <script id="tplVideoBox" type="text/x-jsrender">
+          <div class="result-box video">
+            <div class="thumb-box thumb-272 {{if !thumb}}empty{{/if}}">
+              <a href="#" class="clip" data-player-id='{{:playerId}}'>
+                {{if thumb}}
+                  <img src="{{:thumb}}" class="thumb">
+                {{/if}}
+                {{if player}}
+                  <span class="play-btn"></span>
+                {{/if}}
+              </a>
+            </div>
+            <div class="info-box">
+              <div class="meta"></div>
+              <div class="link-box">
+                <div class="def-btn-box"></div><div class="drop-down-box">
+                  <div class="def-btn-name"></div>
+                  <div class="list">
+                    <div class="links">
+                      <div class="main"></div>
+                      <div class="hidden"></div>
+                      <div class="more-links"><a href="#">Еще</a></div>
+                      <div class="actions"></div>
+                    </div>
+                  </div>
+                </div><div class="def-file-info"></div><div class="second-btn-box"></div>
+              </div>
+            </div>
+          </div>
+        </script>
+        <script id="tplAudioBox" type="text/x-jsrender">
+          <div class="result-box audio">
+            <div class="thumb-box thumb-272 {{if !thumb}}empty{{/if}}">
+              <a href="#" class="clip" data-player-id='{{:playerId}}'>
+                {{if thumb}}
+                  <img src="{{:thumb}}" class="thumb">
+                {{/if}}
+                {{if player}}
+                  <span class="play-btn"></span>
+                  <div class="player-box"></div>
+                {{/if}}
+              </a>
+            </div>
+            <div class="info-box">
+              <div class="meta"></div>
+              <div class="link-box">
+                <div class="def-btn-box"></div><div class="drop-down-box">
+                  <div class="def-btn-name"></div>
+                  <div class="list">
+                    <div class="links">
+                      <div class="main"></div>
+                      <div class="hidden"></div>
+                      <div class="more-links"><a href="#">Еще</a></div>
+                      <div class="actions"></div>
+                    </div>
+                  </div>
+                </div><div class="def-file-info"></div><div class="second-btn-box"></div>
+              </div>
+            </div>
+          </div>
+        </script>
+        <script id="tplFileBox" type="text/x-jsrender">
+          <div class="result-box file">
+            <div class="thumb-box thumb-272 {{:thumb}}"></div>
+            <div class="info-box">
+              <div class="meta"></div>
+              <div class="link-box">
+                <div class="def-btn-box"></div><div class="drop-down-box">
+                  <div class="def-btn-name"></div>
+                  <div class="list">
+                    <div class="links">
+                      <div class="main"></div>
+                      <div class="hidden"></div>
+                      <div class="more-links"><a href="#">Еще</a></div>
+                      <div class="actions"></div>
+                    </div>
+                  </div>
+                </div><div class="def-file-info"></div><div class="second-btn-box"></div>
+              </div>
+            </div>
+          </div>
+        </script>
+        <script id="tplPromoBox" type="text/x-jsrender">
+          <div class="icon">
+            <a href="{{:href}}" class="ga_track_events" target="_blank" data-ga-event="{{:event_attr}}"></a>
+          </div><div class="text">
+            <div class="text-cnt">
+              <p class="hdr">Скачивайте с {{:service}} в 1 клик</p>
+              <p class="button"><a href="{{:href}}" class="ga_track_events" target="_blank" data-ga-event="{{:event_attr}}">
+                {{if install_btn}}{{:install_btn}}{{else}}Установить{{/if}}
+              </a></p>
+          </div></div>
+        </script>
+        <script id="tplVDPPromoBox" type="text/x-jsrender">
+          <div class="icon">
+            <a href="{{:href}}" class="ga_track_events" target="_blank" data-ga-event="{{:event_attr}}"></a>
+          </div><div class="text">
+            <div class="text-cnt"><p>
+            Установите <a href="{{:href}}" class="ga_track_events" target="_blank" data-ga-event="{{:event_attr}}">Video&nbsp;Downloader&nbsp;Pro</a>, чтобы скачать аудио и видео с этого сайта          </p></div></div>
+        </script>
+        <script id="tplHelperSimplePromoBox" type="text/x-jsrender">
+          <div class="center">
+            <img src="/img/extension/icon_32.png" alt="">&nbsp;
+            Рекомендуем установить <a href="{{:href}}" class="ga_track_events bold" target="_blank" data-ga-event="{{:event_attr}}">SaveFrom.net помощник</a>, чтобы скачивать с <b>{{:service}}</b> в&nbsp;1&nbsp;клик.          </div>
+        </script>
+
+        <script id="tplSimplePromoBoxSS" type="text/x-jsrender">
+          <div class="simple-promobox-ss">
+            <div class="center simple-promobox-ss__image">
+              <img src="/img/smart_search/logo_search_savefrom.png" alt="">
+              <span>Savefrom.net рекомендует!</span>
+            </div>
+            <div class="center simple-promobox-ss__text">
+              Установите <a target="_blank" href="{{:href}}" class="ga_track_events bold" target="_blank" data-ga-event="{{:event_attr}}">Быстрый Поиск и Браузер</a> и расширение <strong>SaveFrom.net helper</strong> и скачивайте с {{:service}} в 1 клик            </div>
+          </div>
+        </script>
+
+        <script id="tplHelperSimplePromoBoxFF" type="text/x-jsrender">
+          <div class="center">
+            <img src="/img/extension/icon_32.png" alt="">&nbsp;
+            Установите <a target="_blank" href="{{:href2}}">FireFox mobile</a> и расширение <a target="_blank" href="{{:href}}" class="ga_track_events bold" target="_blank" data-ga-event="{{:event_attr}}">SaveFrom.net helper</a> и скачивайте с <b>{{:service}}</b> в&nbsp;1&nbsp;клик          </div>
+        </script>
+        <script id="tplUVDSimplePromoBox" type="text/x-jsrender">
+          <div class="center">
+            <img src="/img/uvd/icon_32x24.png" alt="">&nbsp;
+            Рекомендуем установить <a href="{{:href}}" class="ga_track_events bold" target="_blank" data-ga-event="{{:event_attr}}">Ummy Video Downloader</a>, чтобы скачивать с <b>{{:service}}</b> в&nbsp;1&nbsp;клик.          </div>
+        </script>
+        <script id="tplMessageBox" type="text/x-jsrender">
+          <div class="result-box simple {{:theme}}">
+            <div class="message">{{:message}}</div>
+          </div>
+        </script>
+        <script id="tplCopyBox" type="text/x-jsrender">
+          <div class="copy-box">
+            <p>Скопируйте ссылку и вставьте в адресную строку браузера или в менеджер закачек:</p>
+            <div class="input-wrap"><input type="text" value="{{:text}}" onfocus="this.select();"></div>
+            <div class="buttons">
+              <a href="#" class="btn link-copy-btn" data-clipboard-text="{{:text}}" onclick="return false;">Копировать</a>
+            </div>
+          </div>
+        </script>
+00000000000000000000000000000000000000000
   <div class="site-info-tabs">
       <!-- responsive tabs -->
       <ul class="r-tabs">
