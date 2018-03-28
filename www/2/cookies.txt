@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.narr8am.pp.ua	TRUE	/	FALSE	1999999999	anarr8amuzll	1522186035
+
