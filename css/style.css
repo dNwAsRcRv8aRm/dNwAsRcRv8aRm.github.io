@@ -1,6 +1,2 @@
-body {
-  background-image: url(/files/Pictures/art.jpg); /* Путь к фоновому изображению */ 
-  background-color: #c7b39b; /* Цвет фона */
-   }
-
+body { background-image: url(/files/Pictures/art.jpg); background-color: #c7b39b; }
 .Time_text { text-align:  center; }
